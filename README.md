@@ -1,24 +1,24 @@
 # Description
-Deploy backup/restore a wordpress from remote Domain server to local Wordpress docker installation.
+Backup/Restore a Wordpress portal from a remote Domain Server to local Docker deployment.
 
 ## Steps
 
 - **Step 01**: Wordpress Backup
 
-    - First we will install the plugin called [UpdraftPlus](https://wordpress.org/plugins/updraftplus/) from plugins Wordpress section. 
+    - First we will install the plugin called [UpdraftPlus](https://wordpress.org/plugins/updraftplus/) from plugins Wordpress section to be easy the process. **We only need the free version to make manual Backup/Restore Wordpress portals**
 
-    - Now inside the plugin just installed go to the tab called **Settings** and configure the location where the backups will be saved. We will select the Google Drive from some google account. This free version will save the backup in a fix default folder called **UpdraftPlus**, so be carefull when execute the backup because the folder will be updated for each backup process.
+    - Now inside the plugin just installed, go to the tab called **Settings** and configure the location where the backups will be saved. We will select the Google Drive from some google account. This free version will save the backup in a fix default folder called **UpdraftPlus**, so be carefull when execute the backup because the folder will be updated for each backup process.
 
     ![UpdraftPlus Drive Configure](./images/plugin_configuration.png "UpdraftPlus Drive Configure")
 
-    - Now we go to the first tab called **Backup/Restore** and click the big button called Backup Now. We select all resource to be backup: themes database, plugins and all resources offer by the plugin to be backup. 
+    - Now we go to the first tab called **Backup/Restore** and click the big button called Backup Now. We select all resource to be backup: themes database, plugins, etc. Wait to finalize the backup and be uploaded to our Google Drive Folder. 
 
 
     ![UpdraftPlus Backup](./images/plugin_restore.png "UpdraftPlus Backup")
 
 - **Step 02**: Deploy locally Wordpress
 
-    We will use Docker as usual and MySQL as Wordpress DB to persiste the data:
+    We will use Docker as usual with MySQL as Wordpress DB service to persiste the data. Execute these commands:
 
     ```
     $ docker network create wordpress-net
@@ -47,7 +47,7 @@ Deploy backup/restore a wordpress from remote Domain server to local Wordpress d
 
 After configure Wizard Worpress initialization. We will have a virgin Worpress to be restored.
 
-- **Step 03**: Install plugins
+- **Step 03**: Install plugins locally
 
 We must install the same plugin **UpdraftPlus** locally to restore Wordpress with the similar version as installed in the cloud.
 

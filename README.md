@@ -49,7 +49,7 @@ After configure Wizard Worpress initialization. We will have a virgin Worpress t
 
 - **Step 03**: Install plugins locally
 
-We must install the same plugin **UpdraftPlus** locally to restore Wordpress with the similar version as installed in the cloud.
+We must install the same plugin **UpdraftPlus** in our Wordpress locally to restore Wordpress with a similar version as installed in the cloud.
 
 - **Step 04**: Restore Wordpress Backup
     - Now we must restore our backup located in our Google Drive Folder account. We must first configure the location of our backups selecting Google Drive from Settings, similar as cloud Wordpress versiona nd login using the same account where we save our backup in previous step.
@@ -59,3 +59,9 @@ We must install the same plugin **UpdraftPlus** locally to restore Wordpress wit
     - Now select this backuo and continue the wizard to backup all files: database, plugins, themes, etc locally.
 
     ![UpdraftPlus Restore](./images/plugin_restore.png "UpdraftPlus Restore")
+
+ ## Some links
+
+- [Wordpress Docker Hub](https://hub.docker.com/_/wordpress)
+- [UpdraftPlus Plugin](https://wordpress.org/plugins/updraftplus/)
+ 
